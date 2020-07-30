@@ -1,8 +1,6 @@
 
 package pageObjectsPackage;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,8 +29,18 @@ public class LoginPage {
 	}
 
 	public static void verifyLogin(WebDriver driver) {
-		element = driver.findElement(By.id("logout"));
+
+		element = driver.findElement(By.xpath("//span[text()='mail.google.com']"));
+		element.click();
 		Reporter.log("Login with valid credentials is successful", true);
+	}
+
+	public static void logOut(WebDriver driver) {
+		element = driver.findElement(By.xpath("//a[@class='gb_D gb_Ta gb_i']/img"));
+		element.click();
+		element = driver.findElement(By.xpath("//*[text()='Sign out']"));
+		element.click();
+		Reporter.log("Logout is successful", true);
 	}
 
 	public static void loginToGmail(WebDriver driver, String username, String password) {
@@ -40,6 +48,7 @@ public class LoginPage {
 		clickNext(driver);
 		fillPassword(driver, password);
 		clickNext(driver);
-	//erifyLogin(driver);
+		verifyLogin(driver);
+		logOut(driver);
 	}
 }

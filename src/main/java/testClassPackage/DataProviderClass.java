@@ -8,9 +8,11 @@ public class DataProviderClass {
 	@DataProvider(name ="loginData")
 	public static Object[][] getLoginData() {
 		return new Object[][] { 
-			{"demosample2020@gmail.com", "testng#1"},
-//			{"wrongusername", "pass1"},
-//			{"Ramesh", "wrongpassword"}
+			/*{"demosample2020", "abc@1"},
+		    {"sample", "testng#1"},
+		    {" ", "testng#1"},
+		    {"demosample2020",""},*/
+		    {"demosample2020","testng#1"}
 			};
 	}
 

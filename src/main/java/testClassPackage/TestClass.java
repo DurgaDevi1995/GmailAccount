@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pageObjectsPackage.LoginPage;
-//import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit;
 
 public class TestClass {
 	public static WebElement element = null;
@@ -35,7 +35,7 @@ public class TestClass {
 
 	@AfterMethod
 	public void tearDown() {
-		//driver.quit();
+	driver.quit();
 	}
 }
 

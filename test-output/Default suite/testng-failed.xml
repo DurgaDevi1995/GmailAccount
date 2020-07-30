@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testClassPackage.TestClass">
+      <class name="testClassPackage.Time">
         <methods>
           <include name="login" invocation-numbers="0"/>
           <include name="SetUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testClassPackage.TestClass -->
+      </class> <!-- testClassPackage.Time -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
